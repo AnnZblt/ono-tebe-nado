@@ -4,34 +4,21 @@ body {
   background-color: #fff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 40px;
-}
-
 /* ссылкам добавлен нижний бордер, т.к. underline залезает на строку (особенно с цифрами) */
-a {
+.index-page a {
   border-bottom: 1px solid #000;
   text-decoration: none;
   text-transform: lowercase;
 }
 
-p {
+.index-page p {
   font-weight: normal;
   font-size: 20px;
   line-height: 1.2;
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -41,8 +28,7 @@ button {
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -57,10 +43,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  padding-top: 92px;
-  padding-right: 25.48px;
-  padding-bottom: 91px;
-  padding-left: 26.52px;
+  padding: 91px 25px;
 }
 
 .header__links-list {
@@ -92,18 +75,12 @@ button {
   display: grid;
   justify-items: start;
   justify-self: end;
-  min-width: 240px;
-}
-
-.header__link,
-.address__location {
+  max-width: 240px;
+  padding-right: 10px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.35;
-}
-
-.address__location {
   font-style: normal;
+  line-height: 1.35;
 }
 
 /* COVER */
@@ -112,8 +89,8 @@ button {
   position: relative;
   background-image: url('../images/cover.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .cover__container {
@@ -164,7 +141,7 @@ button {
   align-items: baseline;
 }
 
-.cover__description-text {
+.cover__description .cover__description-text {
   margin-left: 27px;
   color: #fff;
   font-size: 22px;
@@ -181,7 +158,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   transition-duration: .3s;
-  transition-property: background-color color;
+  transition-property: background-color, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -199,6 +176,8 @@ button {
 .lots__heading {
   margin-bottom: 27px;
   margin-left: 40px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
@@ -223,7 +202,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 563px;
   padding: 51px 40px 47px;
   background-repeat: no-repeat;
   background-position: center;
@@ -246,6 +225,7 @@ button {
   font-size: 22px;
   line-height: 1.2;
   text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .card__text {
@@ -296,10 +276,14 @@ button {
 .about__title {
   margin-top: 136px;
   margin-bottom: 100px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
-.about__text:first-of-type {
-  margin-bottom: 24px;
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 /* FOOTER */
@@ -315,21 +299,20 @@ button {
   justify-self: start;
 }
 
-.footer__link {
-  font-size: 18px;
-  line-height: 1.35;
-}
-
 .footer__menu-link {
   font-size: 18px;
 }
 
-.footer__menu-link_active {
+.footer .footer__menu-link_active {
   border: none;
 }
 
 .footer__menu {
   text-align: center;
+}
+
+.footer__socials {
+  justify-self: end;
 }
 
 .footer__social-list-item,
@@ -340,17 +323,16 @@ button {
 .footer__social-list {
   display: grid;
   grid-template-columns: repeat(3, 48px);
-  justify-self: end;
   gap: 24px 48px;
   max-height: 48px;
   line-height: 0;
 }
 
 .footer__social-link {
-    display: block;
-    border-radius: 50%;
-    border-bottom: none;
-    overflow: hidden;
+  display: block;
+  border-radius: 50%;
+  border-bottom: none;
+  overflow: hidden;
   font-size: 0;
-    text-decoration: none;
+  text-decoration: none;
 }
