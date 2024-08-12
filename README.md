@@ -1,8 +1,1 @@
-# Проектная работа "Оно тебе надо"
-
-***
-
-Студент **Анна Заболотских**
-[Ссылка на репозиторий](https://github.com/AnnZblt/ono-tebe-nado)
-
-***
+https://github.com/AnnZblt/ono-tebe-nado
